@@ -1,0 +1,863 @@
+/* WebScenario Manager Styles */
+
+.webscenario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.webscenario-stats {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.webscenario-stats .stats-item {
+    display: inline-block;
+    margin-right: 30px;
+    padding: 5px 0;
+}
+
+.webscenario-stats .stats-item:last-child {
+    margin-right: 0;
+}
+
+.webscenario-stats .stats-number {
+    font-weight: bold;
+    font-size: 18px;
+    color: #495057;
+}
+
+.webscenario-stats .stats-label {
+    color: #6c757d;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.webscenario-status-enabled {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.webscenario-status-disabled {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.webscenario-steps-count {
+    background: #007bff;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.webscenario-delay {
+    font-family: monospace;
+    background: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #dee2e6;
+}
+
+.webscenario-actions {
+    white-space: nowrap;
+}
+
+.webscenario-actions a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.webscenario-actions a:last-child {
+    margin-right: 0;
+}
+
+.webscenario-filter {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.webscenario-dashboard-card {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.webscenario-dashboard-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #495057;
+    font-size: 1rem;
+}
+
+.webscenario-table-responsive {
+    overflow-x: auto;
+}
+
+/* WebScenario Statistics Dashboard */
+.webscenario-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.webscenario-stat-card {
+    padding: 8px;
+    text-align: center;
+    margin: 5px;
+}
+
+[theme="blue-theme" ] .webscenario-stat-card {
+    background: #ffffff;
+}
+
+[theme="dark-theme" ] .webscenario-stat-card {
+    background: #2b2b2b;
+}
+
+.webscenario-stat-value {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 4px 0;
+    line-height: 1;
+}
+
+.webscenario-stat-label {
+    color: #6c757d;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 2px;
+}
+
+.webscenario-stat-description {
+    color: #868e96;
+    font-size: 0.65rem;
+    margin-top: 2px;
+}
+
+.stat-success { color: #28a745; }
+.stat-warning { color: #ffc107; }
+.stat-danger { color: #dc3545; }
+.stat-info { color: #17a2b8; }
+.stat-primary { color: #007bff; }
+
+.webscenario-progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 4px 0;
+}
+
+.webscenario-progress-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.progress-success { background-color: #28a745; }
+.progress-warning { background-color: #ffc107; }
+.progress-danger { background-color: #dc3545; }
+
+/* WebScenario View Page Styles - Usando apenas classes padrão Zabbix */
+
+.monospace-font {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+[theme="blue-theme" ] .monospace-font {
+    background: #ffffff;
+}
+
+[theme="dark-theme" ] .monospace-font {
+    background: #2b2b2b;
+}
+
+/* WebScenario Wizard Styles */
+
+.webscenario-wizard {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.wizard-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 120px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.step-label {
+    font-size: 12px;
+    color: #6c757d;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.step-item.active .step-number {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.step-item.active .step-label {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.step-item.completed .step-number {
+    background: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.step-item.completed .step-label {
+    color: #28a745;
+}
+
+.step-separator {
+    flex: 1;
+    height: 2px;
+    background: #dee2e6;
+    margin: 0 10px;
+    position: relative;
+    top: -8px;
+}
+
+.step-item.completed + .step-separator {
+    background: #28a745;
+}
+
+.wizard-content {
+    min-height: 400px;
+    position: relative;
+}
+
+.step-content {
+    padding: 20px 0;
+    display: none;
+}
+
+.step-content.active {
+    display: block;
+}
+
+/* Ensure Zabbix form fields are visible */
+.webscenario-wizard .form-grid-item {
+    display: flex !important;
+    margin-bottom: 10px;
+}
+
+.webscenario-wizard .form-grid-label {
+    display: block !important;
+}
+
+.webscenario-wizard .form-grid-field {
+    display: block !important;
+}
+
+/* Override any hidden Zabbix styles */
+.webscenario-wizard input,
+.webscenario-wizard select,
+.webscenario-wizard textarea {
+    display: inline-block !important;
+}
+
+
+
+#http-user-row.show,
+#http-password-row.show {
+    display: block !important;
+}
+
+/* Force visibility for form fields in active steps */
+.step-content.active .form-grid-item,
+.step-content.active .form-field,
+.step-content.active .form-row {
+    display: block !important;
+}
+
+.step-content.active input:not([type="hidden"]),
+.step-content.active select,
+.step-content.active textarea {
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+.step-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.step-header h4 {
+    margin: 0 0 8px 0;
+    color: #495057;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.step-description {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0;
+}
+
+.steps-config {
+    margin-top: 20px;
+}
+
+.steps-table {
+    margin-top: 15px;
+}
+
+.steps-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+}
+
+.steps-table th,
+.steps-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.steps-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+}
+
+.steps-table input[type="text"] {
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+.steps-table .text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#webscenario_response_graph_container {
+    width: 100%;
+    height: 100% !important;
+}
+.steps-table .nowrap {
+    white-space: nowrap;
+}
+
+.steps-table .btn-link {
+    margin-right: 8px;
+}
+
+/* Step Edit Form Styles */
+.step-edit-row {
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+}
+
+.step-edit-form {
+    padding: 20px;
+    max-width: 100%;
+}
+
+.step-edit-header h4 {
+    margin: 0 0 20px 0;
+    color: #495057;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+.step-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    margin-bottom: 25px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 15px;
+    background: white;
+}
+
+.form-section h5 {
+    margin: 0 0 15px 0;
+    color: #495057;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    padding: 6px 10px;
+    font-size: 13px;
+    background: white;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.table-container {
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.field-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.field-table th,
+.field-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.field-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.field-table input[type="text"] {
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 13px;
+    width: 100%;
+}
+
+
+
+
+.step-form-actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    gap: 10px;
+}
+
+.review-content {
+    padding: 20px 0;
+}
+
+.review-section {
+    margin-bottom: 30px;
+}
+
+.review-section h5 {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+[theme="blue-theme" ] .review-section h5 {
+    color: #495057;
+}
+
+[theme="dark-theme" ] .review-section h5 {
+    color: #ffffff;
+}
+
+.review-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.review-table td {
+    padding: 8px 12px;
+}
+
+.review-table td:first-child {
+    width: 200px;
+    color: #495057;
+}
+
+.wizard-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 0 0;
+    border-top: 1px solid #dee2e6;
+    margin-top: 20px;
+}
+
+/* Field Row Styles for Variables and Headers */
+.field-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.field-row input[type="text"] {
+    flex: 1;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+.field-row input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.field-row  {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 13px;
+}
+
+.field-row .btn-link:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .webscenario-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .webscenario-stats .stats-item {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .webscenario-actions {
+        font-size: 12px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        min-width: auto;
+    }
+
+    .webscenario-info .info-label {
+        width: auto;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .wizard-steps {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .step-separator {
+        width: 2px;
+        height: 20px;
+        margin: 5px 0;
+        top: 0;
+    }
+
+    .step-item {
+        min-width: auto;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .step-number {
+        margin-bottom: 0;
+    }
+
+    .wizard-navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .wizard-navigation button {
+        width: 100%;
+    }
+}
+
+/* Modal specific visibility fixes */
+.modal-popup .webscenario-wizard .form-grid-item,
+.modal-popup .webscenario-wizard .form-field,
+.modal-popup .webscenario-wizard .form-row {
+    display: block !important;
+}
+
+.modal-popup .webscenario-wizard input:not([type="hidden"]),
+.modal-popup .webscenario-wizard select,
+.modal-popup .webscenario-wizard textarea {
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+/* Specific field visibility rules for modal */
+.modal-popup .webscenario-wizard label,
+.modal-popup .webscenario-wizard .form-label {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.modal-popup .webscenario-wizard .form-grid-item > *,
+.modal-popup .webscenario-wizard .form-field > * {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Ensure CFormGrid items are visible in modal */
+.modal-popup .webscenario-wizard .form-grid tr {
+    display: table-row !important;
+}
+
+.modal-popup .webscenario-wizard .form-grid td {
+    display: table-cell !important;
+}
+
+/* Force all form elements to be visible in modal context */
+.modal-popup-large .webscenario-wizard * {
+    visibility: visible !important;
+}
+
+.modal-popup-large .step-content.active {
+    display: block !important;
+}
+
+.modal-popup-large .step-content.active * {
+    visibility: visible !important;
+}
+
+
+
+/* Dashboard Stats - Estrutura simplificada e funcional */
+.stats-dashboard-section {
+  margin-bottom: 24px;
+}
+
+.stats-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 220px;
+  max-width: 280px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 16px;
+  transition: box-shadow 0.2s ease;
+}
+
+[theme="blue-theme" ] .stat-card {
+    background: #ffffff;
+}
+
+[theme="dark-theme" ] .stat-card {
+    background: #2b2b2b;
+}
+
+
+.stat-card:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.stat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.stat-card-title {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #768d99;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.stat-card-value {
+  font-size: 2.2em;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.stat-card-footer {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.stat-card-label {
+  font-size: 0.8em;
+  color: #999;
+  font-weight: 500;
+}
+
+/* Bordas coloridas por tipo */
+.stat-card-success {
+  border-left: 4px solid #59db8f;
+}
+
+.stat-card-danger {
+  border-left: 4px solid #ff465c;
+}
+
+.stat-card-info {
+  border-left: 4px solid #1f9bcf;
+}
+
+.stat-card-primary {
+  border-left: 4px solid #768d99;
+}
+
+/* Cores dos valores */
+.stat-success { color: #59db8f; }
+.stat-danger { color: #ff465c; }  
+.stat-info { color: #1f9bcf; }
+.stat-primary { color: #768d99; }
+
+.dashboard-problems-section {
+  margin-top: 32px;
+}
+
+.dashboard-problems-widget {
+  background: #fff3f3;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.dashboard-main-section {
+  margin-top: 32px;
+}
+
+/* Estilos para gráficos d3.js */
+.d3-chart {
+  width: 100%;
+  height: 320px;
+  margin: 24px 0;
+}
+
+.d3-axis path,
+.d3-axis line {
+  fill: none;
+  stroke: #888;
+  shape-rendering: crispEdges;
+}
+
+.d3-bar {
+  fill: #337ab7;
+}
+
+.d3-bar.problem {
+  fill: #e74c3c;
+}
+
+.d3-bar.ok {
+  fill: #27ae60;
+}
+
+.d3-legend {
+  font-size: 0.95em;
+  fill: #444;
+}

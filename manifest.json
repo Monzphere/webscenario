@@ -1,0 +1,53 @@
+{
+    "manifest_version": "2",
+    "type": "module",
+    "author": "MonZphere",
+    "name": "WebScenario Manager",
+    "description": "Advanced module for managing web scenarios in Zabbix with a user-friendly interface for creation, visualization and monitoring. Thanks all partners Capmon,Unirede,Lunio,IOS.",
+    "url": "https://monzphere.com",
+    "id": "webscenario",
+    "namespace": "WebScenario",
+    "version": "1.0.0",
+    "assets": {
+        "css": ["webscenario.css"],
+        "js": ["webscenario.js", "webscenario.dashboard.js"]
+    },
+    "actions": {
+        "webscenario.list": {
+            "class": "CControllerWebScenarioList",
+            "view": "webscenario.list",
+            "layout": "layout.htmlpage"
+        },
+        "webscenario.create": {
+            "class": "CControllerWebScenarioCreate",
+            "view": "webscenario.create",
+            "layout": "layout.json"
+        },
+        "webscenario.edit": {
+            "class": "CControllerWebScenarioEdit",
+            "view": "webscenario.edit",
+            "layout": "layout.htmlpage"
+        },
+        "webscenario.update": {
+            "class": "CControllerWebScenarioUpdate"
+        },
+        "webscenario.delete": {
+            "class": "CControllerWebScenarioDelete"
+        },
+        "webscenario.steps": {
+            "class": "CControllerWebScenarioSteps",
+            "view": "webscenario.steps",
+            "layout": "layout.htmlpage"
+        },
+        "webscenario.view": {
+            "class": "CControllerWebScenarioView",
+            "view": "webscenario.view",
+            "layout": "layout.htmlpage"
+        },
+        "webscenario.dashboard": {
+            "class": "CControllerWebScenarioDashboard",
+            "view": "webscenario.dashboard",
+            "layout": "layout.htmlpage"
+        }
+    }
+}
